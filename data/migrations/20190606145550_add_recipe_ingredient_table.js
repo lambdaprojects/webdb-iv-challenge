@@ -7,7 +7,7 @@ exports.up = function(knex, Promise) {
       .notNullable()
       .references("id")
       .inTable("recipe")
-      .onDelete("RESTRICT")
+      //.onDelete("RESTRICT")
       .onUpdate("CASCADE");
 
     tbl
@@ -16,7 +16,7 @@ exports.up = function(knex, Promise) {
       .notNullable()
       .references("id")
       .inTable("ingredient")
-      .onDelete("RESTRICT")
+      //.onDelete("RESTRICT")
       .onUpdate("CASCADE");
 
     tbl

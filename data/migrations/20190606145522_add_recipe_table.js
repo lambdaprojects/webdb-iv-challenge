@@ -13,7 +13,7 @@ exports.up = function(knex, Promise) {
       .inTable("dish")
       .onDelete("RESTRICT")
       .onUpdate("CASCADE");
-    tbl.text("instructions", text).notNullable();
+    tbl.text("instructions").notNullable();
   });
 };
 
