@@ -1,6 +1,7 @@
 const express = require("express");
 const dishRouter = require("./data/routers/dishRouter.js");
-//const studentRouter = require("./data/routers/studentRouter.js");
+const recipeRouter = require("./data/routers/recipeRouter.js");
+const ingredientRouter = require("./data/routers/ingredientRouter.js");
 
 const server = express();
 server.use(express.json());
@@ -10,5 +11,6 @@ server.get("/", (req, res) => {
 });
 
 server.use("/api/dishes", dishRouter);
-//server.use("/api/students", studentRouter);
+server.use("/api/recipes", recipeRouter);
+server.use("/api/ingredients", ingredientRouter);
 module.exports = server;
