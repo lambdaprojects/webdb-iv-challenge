@@ -36,6 +36,30 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+router.get("/:id/recipes/ingredients/", async (req, res) => {
+  try {
+    const dish = await dishHelper.getDishIngredientsForRecipeId(req.params.id);
+    res.status(201).json(dish);
+  } catch (error) {
+    console.log(":: ERROR ::" + error);
+    res.status(500).json({
+      Message: "There was an error displaying the dishes and recipes."
+    });
+  }
+});
+
+router.get("/:id/recipes/shoppingList/", async (req, res) => {
+  try {
+    const dish = await dishHelper.getShoppingList(req.params.id);
+    res.status(201).json(dish);
+  } catch (error) {
+    console.log(":: ERROR ::" + error);
+    res.status(500).json({
+      Message: "There was an error displaying the dishes and recipes."
+    });
+  }
+});
+
 router.post("/", async (req, res) => {
   try {
     const dish = await dishHelper.addDish(req.body);
