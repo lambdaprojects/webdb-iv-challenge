@@ -1,0 +1,30 @@
+{
+  "name": "webdb-iv-challenge",
+  "version": "1.0.0",
+  "description": "## Topics",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lambdaprojects/webdb-iv-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lambdaprojects/webdb-iv-challenge/issues"
+  },
+  "homepage": "https://github.com/lambdaprojects/webdb-iv-challenge#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.17.3",
+    "knex-cleaner": "^1.1.4",
+    "sqlite3": "^4.0.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
